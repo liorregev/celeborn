@@ -199,10 +199,9 @@ public abstract class BasedShuffleWriter<K, V, C> extends ShuffleWriter<K, V> {
   }
 
   /**
-   * This method will push the remaining data and close these pushers.
-   * It's important, will send Mapper End RPC to LifecycleManager to update
-   * the attempt of the corresponding task.
-   * We should only call this method when the task is successfully completed.
+   * This method will push the remaining data and close these pushers. It's important, will send
+   * Mapper End RPC to LifecycleManager to update the attempt of the corresponding task. We should
+   * only call this method when the task is successfully completed.
    */
   protected void close() throws IOException, InterruptedException {
     long pushMergedDataTime = System.nanoTime();
